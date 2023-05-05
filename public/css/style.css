@@ -74,6 +74,9 @@ body {
 .navbar .icones-mobile {
   display: none;
 }
+.vermelho {
+  color: red;
+}
 
 .corpo {
   display: flex;

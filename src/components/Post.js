@@ -3,6 +3,17 @@ import { useState } from "react";
 export default function Post(props) {
 
     let [salvo, setSalvo] = useState(false);
+    let [curtido, setCurtido] = useState(false);
+
+    function curtirPublicacao () {
+        setCurtido(!curtido)
+    }
+    
+    function curtirImagem () {
+        if(curtido === false) {
+            setCurtido(!curtido)
+        }
+    }
 
     function alternarSalvo() {
         setSalvo(!salvo);
@@ -22,13 +33,13 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img data-test="post-image" src={props.src2atributo} alt={props.alt2atributo} />
+                <img data-test="post-image" onClick={curtirImagem} src={props.src2atributo} alt={props.alt2atributo} />
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
+                        <ion-icon class={curtido ? "vermelho" : ""} data-test="like-post" name={curtido ? "heart" : "heart-outline"} onClick={curtirPublicacao}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
