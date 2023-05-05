@@ -1,4 +1,13 @@
+import { useState } from "react";
+
 export default function Post(props) {
+
+    let [salvo, setSalvo] = useState(false);
+
+    function alternarSalvo() {
+        setSalvo(!salvo);
+    }
+
     console.log(props);
     return (
         <div data-test="post" class="post">
@@ -24,7 +33,7 @@ export default function Post(props) {
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
+                        <ion-icon data-test="save-post" name={salvo ? "bookmark" : "bookmark-outline"} onClick={alternarSalvo}></ion-icon>
                     </div>
                 </div>
 
