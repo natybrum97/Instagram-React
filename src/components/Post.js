@@ -38,7 +38,7 @@ export default function Post(props) {
             <div className="fundo">
                 <div className="acoes">
                     <div>
-                        <ion-icon className={curtido ? "vermelho" : ""} data-test="like-post" name={curtido ? "heart" : "heart-outline"} onClick={curtirPublicacao}></ion-icon>
+                        <ion-icon class={curtido ? "vermelho" : "nada"} data-test="like-post" name={curtido ? "heart" : "heart-outline"} onClick={curtirPublicacao}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
