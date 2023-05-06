@@ -8,14 +8,14 @@ export default function Suggestions() {
         {src:'assets/img/smallcutecats.svg', alt:'smallcutecats', nome:'smallcutecats', segueounao:'Segue você'}
     ]
     return (
-        <div class="sugestoes">
+        <div className="sugestoes">
             
-            <div class="titulo">
-                <p class="vertudo">Sugestões para você</p>
-                <div class="ver">Ver tudo</div>
+            <div className="titulo">
+                <p className="vertudo">Sugestões para você</p>
+                <div className="ver">Ver tudo</div>
             </div>
 
-            {arraysuggestion.map(suggestion => <Suggestion srcatributo={suggestion.src} altatributo={suggestion.alt} nomeatributo={suggestion.nome} segueounaoatributo={suggestion.segueounao} />)}
+            {arraysuggestion.map(suggestion => <Suggestion key={suggestion.alt} srcatributo={suggestion.src} altatributo={suggestion.alt} nomeatributo={suggestion.nome} segueounaoatributo={suggestion.segueounao} />)}
 
         </div>
 

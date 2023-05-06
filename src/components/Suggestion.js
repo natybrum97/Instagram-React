@@ -1,16 +1,16 @@
 export default function Suggestion(props) {
-    console.log(props);
+    
     return (
-        <div class="sugestao">
-                <div class="usuario">
+        <div className="sugestao">
+                <div className="usuario">
                     <img src={props.srcatributo} alt={props.altatributo} />
-                    <div class="texto">
-                        <div class="nome">{props.nomeatributo}</div>
-                        <div class="razao">{props.segueounaoatributo}</div>
+                    <div className="texto">
+                        <div className="nome">{props.nomeatributo}</div>
+                        <div className="razao">{props.segueounaoatributo}</div>
                     </div>
                 </div>
 
-                <div class="seguir">Seguir</div>
+                <div className="seguir">Seguir</div>
             </div>
     );
 }
