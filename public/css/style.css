@@ -220,7 +220,48 @@ body {
 
 .post .conteudo img {
   width: 100%;
+  position: relative;
 }
+.coracao-animado {
+  position: absolute;
+  top: 520px;
+  left: 690px;
+  width: 150px;
+  height: 150px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  color: white;
+  opacity: 1;
+  transform: scale(0.2);
+  transition: all 0.3s ease-out;
+  animation: coracao 0.3s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.display {
+  display: none;
+}
+
+.post .conteudo ion-icon:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes coracao {
+  0% {
+    opacity: 1;
+    transform: scale(0.2);
+  }
+  99% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
 
 .post .fundo .acoes {
   display: flex;

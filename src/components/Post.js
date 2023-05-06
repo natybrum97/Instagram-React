@@ -5,12 +5,12 @@ export default function Post(props) {
     let [salvo, setSalvo] = useState(false);
     let [curtido, setCurtido] = useState(false);
 
-    function curtirPublicacao () {
+    function curtirPublicacao() {
         setCurtido(!curtido)
     }
-    
-    function curtirImagem () {
-        if(curtido === false) {
+
+    function curtirImagem() {
+        if (curtido === false) {
             setCurtido(!curtido)
         }
     }
@@ -33,6 +33,7 @@ export default function Post(props) {
 
             <div className="conteudo">
                 <img data-test="post-image" onDoubleClick={curtirImagem} src={props.src2atributo} alt={props.alt2atributo} />
+                <ion-icon class={curtido ? "coracao-animado" : "display"} name="heart"></ion-icon>
             </div>
 
             <div className="fundo">
